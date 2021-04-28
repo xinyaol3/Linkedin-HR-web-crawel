@@ -10,7 +10,6 @@ from selenium import webdriver
 from bs4 import BeautifulSoup
 import openpyxl
 from pathlib import Path
-#from gw_utility.logging import Logging
 
 
 browser = webdriver.Chrome('chromedriver.exe')
@@ -73,8 +72,8 @@ def getData(company,location):
         rows+=1
     return data
 #type in the company name,hr,location as keyword to search the people on Linkedin
-def SearchTalent(Business_Entity,Location):
-    browser.get('https://www.linkedin.com/search/results/all/?keywords='+Business_Entity+'%20hr%20'+Location+'&origin=GLOBAL_SEARCH_HEADER')
+def SearchTalent(Business_Entity,Location,title):
+    browser.get('https://www.linkedin.com/search/results/all/?keywords='+Business_Entity+'%20'+title+'%20'+Location+'&origin=GLOBAL_SEARCH_HEADER')
 
 #Retrieve the people's profile links 
 def getProfile():
@@ -89,7 +88,7 @@ def getProfile():
     return links
 
 #Retrieve the data from the profile link and write in the excel file
-def getAndWriteInfo(links,row,col,Business_Entity):
+def getAndWriteInfo(links,row,col,Business_Entity,position):
     org = col
     for link in links:
         browser.get(link)
@@ -113,7 +112,7 @@ def getAndWriteInfo(links,row,col,Business_Entity):
             title = name_title[i].get_text().strip()
             company = companys[i].get_text().strip()
             #Search by the key word 'HR' and company name
-            if 'HR' in title and Business_Entity in company:
+            if position in title and Business_Entity in company:
                 sheet[col+str(row)] = title
                 temp = ord(col[0])
                 col = chr(temp+1)
@@ -137,13 +136,13 @@ def getAndWriteInfo(links,row,col,Business_Entity):
     col = org
 
 #Find and write all HR position for each company on the list in relative location
-def ImplementSheet(data,row,col,company,location):
+def ImplementSheet(data,row,col,company,location,title):
     data_size = len(data[company])
     for i in range(row-2,data_size):
-        SearchTalent(data[company][i],data[location][i])
+        SearchTalent(data[company][i],data[location][i],title)
         links = getProfile()
         try:
-            getAndWriteInfo(links,row,col,data[company][i])
+            getAndWriteInfo(links,row,col,data[company][i],title)
         except AttributeError as error:
             # Output expected AttributeErrors.
             print(error)
@@ -151,16 +150,19 @@ def ImplementSheet(data,row,col,company,location):
             # Output unexpected Exceptions.
             print(exception)
         row+=1
+#apply the searching and writing process
+def application():
+    company = input ("Enter the company respresentation title: ")
+    location = input ("Enter the location reprsentation title: ")
+    title = input ("Enter the title for people you want crawl on Linkedin: ")
+    start_row = int(input("Enter the rows index you want to start: "))
+    start_col = input("Enter the rows column index you want to start: ")
+    print("start runing: ",datetime.datetime.now())
+    AutoLogin()
+    data = getData(company,location)
+    print("start crawling: ",datetime.datetime.now())
+    ImplementSheet(data, start_row, start_col,company,location,title)
+    print('Done: ',datetime.datetime.now())
 
-print("start runing: ",datetime.datetime.now())
-AutoLogin()
-company = 'Business_Entity'
-location = 'Location'
-
-data = getData(company,location)
-
-start_row = 2
-start_col = 'E'
-print("start crawling: ",datetime.datetime.now())
-ImplementSheet(data, start_row, start_col,'Business_Entity','Location')
-print('Done: ',datetime.datetime.now())
+#execute the program
+application()
