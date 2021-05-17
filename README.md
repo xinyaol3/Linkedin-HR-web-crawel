@@ -11,7 +11,8 @@ https://chromedriver.chromium.org/downloads
          
       Thie project folder contains ChromeDriver 90.0.4430.24. Please replace it if you have different version.
       
-      Please install the selenium package before import the webdriver
+      Please install the selenium package before import the webdriver.
       
+      Pass in the Book.xslx as a test file.
       
       
