@@ -10,5 +10,8 @@ https://chromedriver.chromium.org/downloads
       ![image](https://user-images.githubusercontent.com/46506718/118541122-357cf300-b706-11eb-8d18-aa707a523031.png)
          
       Thie project folder contains ChromeDriver 90.0.4430.24. Please replace it if you have different version.
+      
       Please install the selenium package before import the webdriver
+      
+      
       
