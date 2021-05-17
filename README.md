@@ -13,6 +13,6 @@ https://chromedriver.chromium.org/downloads
       
       Please install the selenium package before import the webdriver.
       
-      Pass in the Book.xslx as a test file.
+      The Book.xslx is a test file.
       
       
