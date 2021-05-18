@@ -21,12 +21,12 @@ https://chromedriver.chromium.org/downloads
 
 2. Run and Compile
 
-Based on the columns names are given by the file and enter in. For example, we will search the HR position from the business entiies and locations which are given by Book.xlsx. And start to write from E2. 
+      Based on the columns names are given by the file and enter in. For example, we will search the HR position from the business entiies and locations which are given by               Book.xlsx. And start to write from E2. 
 
-![image](https://user-images.githubusercontent.com/46506718/118705241-d7ffa980-b7cc-11eb-8af7-88b7af468d15.png)
+      ![image](https://user-images.githubusercontent.com/46506718/118705241-d7ffa980-b7cc-11eb-8af7-88b7af468d15.png)
 
-Once start compiling, it will record the start and end time for each step in process.
+      Once start compiling, it will record the start and end time for each step in process.
 
-![image](https://user-images.githubusercontent.com/46506718/118705289-e9e14c80-b7cc-11eb-8ea2-1174a50ee9cf.png)
+      ![image](https://user-images.githubusercontent.com/46506718/118705289-e9e14c80-b7cc-11eb-8ea2-1174a50ee9cf.png)
 
       
