@@ -19,5 +19,16 @@ https://chromedriver.chromium.org/downloads
       
       In the Book.xlsx, Business_Entity and Location are given.The crawl will implement the talent being searched on linkedin to the right columns.
 
+2. Run and Compile
+
+Based on the columns names are given by the file and enter in. For example, we will search the HR position from the business entiies and locations which are given by Book.xlsx. And start to write from E2. 
+
+![image](https://user-images.githubusercontent.com/46506718/118704562-1cd71080-b7cc-11eb-9206-d12e5b5cbba2.png)
+
+Once start compiling, it will record the start and end time for each step in process.
+
+![image](https://user-images.githubusercontent.com/46506718/118705114-b0a8dc80-b7cc-11eb-8a08-ec657e9ab9f5.png)
+
+
       
       
