@@ -13,6 +13,11 @@ https://chromedriver.chromium.org/downloads
       
       Please install the selenium package before import the webdriver.
       
-      The Book.xslx is a test file.
+      The Book.xlsx is a test file.
+      
+      ![image](https://user-images.githubusercontent.com/46506718/118702848-4d1daf80-b7ca-11eb-83fc-8b0fd0eacd34.png)
+      
+      In the Book.xlsx, Business_Entity and Location are given.The crawl will implement the talent being searched on linkedin to the right columns.
+
       
       
