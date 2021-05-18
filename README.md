@@ -21,12 +21,17 @@ https://chromedriver.chromium.org/downloads
 
 2. Run and Compile
 
-      Based on the columns names are given by the file and enter in. For example, we will search the HR position from the business entiies and locations which are given by               Book.xlsx. And start to write from E2. 
+      Based on the columns names are given by the file and enter in. For example, we will search the HR position from the business entiies and locations which are given by             Book.xlsx. And start to write from E2. 
 
       ![image](https://user-images.githubusercontent.com/46506718/118705241-d7ffa980-b7cc-11eb-8af7-88b7af468d15.png)
 
-      Once start compiling, it will record the start and end time for each step in process.
+      Once start compiling, it will record the start and end time for each step in process, it will skip the part which is not able to find on Linkedin.
 
       ![image](https://user-images.githubusercontent.com/46506718/118705289-e9e14c80-b7cc-11eb-8ea2-1174a50ee9cf.png)
+      
+      Once it done. The all HR talent from given company which can be found on Linkedin has been written start from E2.
+      
+      ![image](https://user-images.githubusercontent.com/46506718/118705764-7c81eb80-b7cd-11eb-98ba-25b6f0cd4a53.png)
+
 
       
